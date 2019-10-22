@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/pqrs-org/cpp-cf-boolean.svg?branch=master)](https://travis-ci.com/pqrs-org/cpp-cf-boolean)
+[![Build Status](https://github.com/pqrs-org/cpp-cf-boolean/workflows/CI/badge.svg)](https://github.com/pqrs-org/cpp-cf-boolean/actions)
 [![License](https://img.shields.io/badge/license-Boost%20Software%20License-blue.svg)](https://github.com/pqrs-org/cpp-cf-boolean/blob/master/LICENSE.md)
 
 # cpp-cf-boolean

@@ -20,4 +20,6 @@ int main(void) {
     expect(pqrs::cf::make_bool(nullptr) == std::nullopt);
     expect(pqrs::cf::make_bool(CFSTR("true")) == std::nullopt);
   };
+
+  return 0;
 }

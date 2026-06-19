@@ -9,13 +9,13 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include <optional>
 
-namespace pqrs {
-namespace cf {
-inline CFBooleanRef make_cf_boolean(bool value) {
+namespace pqrs::cf {
+
+[[nodiscard]] inline CFBooleanRef make_cf_boolean(bool value) noexcept {
   return value ? kCFBooleanTrue : kCFBooleanFalse;
 }
 
-inline std::optional<bool> make_bool(CFTypeRef value) {
+[[nodiscard]] inline std::optional<bool> make_bool(CFTypeRef value) noexcept {
   if (!value) {
     return std::nullopt;
   }
@@ -26,5 +26,5 @@ inline std::optional<bool> make_bool(CFTypeRef value) {
 
   return CFBooleanGetValue(static_cast<CFBooleanRef>(value));
 }
-} // namespace cf
-} // namespace pqrs
+
+} // namespace pqrs::cf

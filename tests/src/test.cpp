@@ -1,7 +1,7 @@
 #include <boost/ut.hpp>
 #include <pqrs/cf/boolean.hpp>
 
-int main(void) {
+int main() {
   using namespace boost::ut;
   using namespace boost::ut::literals;
 
@@ -11,12 +11,8 @@ int main(void) {
   };
 
   "make_bool"_test = [] {
-    expect(pqrs::cf::make_bool(kCFBooleanTrue) != std::nullopt);
-    expect(*pqrs::cf::make_bool(kCFBooleanTrue) == true);
-
-    expect(pqrs::cf::make_bool(kCFBooleanFalse) != std::nullopt);
-    expect(*pqrs::cf::make_bool(kCFBooleanFalse) == false);
-
+    expect(pqrs::cf::make_bool(kCFBooleanTrue) == std::optional<bool>{true});
+    expect(pqrs::cf::make_bool(kCFBooleanFalse) == std::optional<bool>{false});
     expect(pqrs::cf::make_bool(nullptr) == std::nullopt);
     expect(pqrs::cf::make_bool(CFSTR("true")) == std::nullopt);
   };
